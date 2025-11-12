@@ -1,123 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistem Pelanggaran Siswa</title>
-  <script src="/_sdk/data_sdk.js"></script>
-  <script src="/_sdk/element_sdk.js"></script>
+  <title>Pendataan Pelanggaran Siswa</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-  </style>
-  <style>@view-transition { navigation: auto; }</style>
- </head>
- <body>
-  <div class="min-h-full gradient-bg py-8 px-4"><!-- Decorative Elements -->
-   <div class="decorative-circle" style="width: 100px; height: 100px; top: 10%; left: 5%; animation-delay: 0s;"></div>
-   <div class="decorative-circle" style="width: 150px; height: 150px; top: 60%; right: 8%; animation-delay: 2s;"></div>
-   <div class="decorative-circle" style="width: 80px; height: 80px; bottom: 15%; left: 15%; animation-delay: 4s;"></div>
-   <div class="max-w-7xl mx-auto relative z-10"><!-- Header -->
-    <div class="text-center mb-10">
-     <div class="inline-block glass-effect rounded-full p-6 mb-6 card-shadow relative">
-      <svg class="w-20 h-20 text-blue-600" fill="currentColor" viewbox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-      </svg>
-      <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-pulse"></div>
-     </div>
-     <h1 id="judul-utama" class="text-5xl font-bold text-white mb-3 drop-shadow-lg">Sistem Pelanggaran Siswa</h1>
-     <p id="nama-sekolah" class="text-2xl text-green-50 font-medium">SMA Negeri 1</p>
-     <div class="mt-4 flex justify-center gap-3"><span class="px-4 py-2 bg-white bg-opacity-30 rounded-full text-white text-sm font-semibold backdrop-blur-sm">📚 Disiplin</span> <span class="px-4 py-2 bg-white bg-opacity-30 rounded-full text-white text-sm font-semibold backdrop-blur-sm">🎯 Tertib</span> <span class="px-4 py-2 bg-white bg-opacity-30 rounded-full text-white text-sm font-semibold backdrop-blur-sm">✨ Berprestasi</span>
-     </div>
-    </div>
-    <div class="grid lg:grid-cols-2 gap-8"><!-- Form Input -->
-     <div class="glass-effect rounded-3xl p-8 card-shadow relative"><!-- Icon Decorations -->
-      <svg class="icon-decoration w-32 h-32 text-blue-500" style="top: -20px; right: -20px;" fill="currentColor" viewbox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-      </svg>
-      <div class="flex items-center mb-6">
-       <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mr-4">
-        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-        </svg>
-       </div>
-       <h2 class="text-3xl font-bold text-gray-800">Form Pencatatan</h2>
+</head>
+<body class="gradient-bg min-h-screen flex flex-col items-center justify-center">
+  <div class="glass p-6 rounded-2xl w-full max-w-md shadow-xl">
+    <h1 class="text-2xl font-bold mb-4 text-center text-white">Form Pelanggaran Siswa</h1>
+
+    <form id="formPelanggaran" class="flex flex-col gap-3">
+      <select id="kelas" class="p-2 rounded-lg">
+        <option value="">Pilih Kelas</option>
+        <option>X-A</option>
+        <option>XI-IPA-1</option>
+        <option>XII-IPS-1</option>
+      </select>
+
+      <input id="nama" type="text" placeholder="Nama Siswa" class="p-2 rounded-lg">
+
+      <textarea id="pelanggaran" placeholder="Jenis Pelanggaran" class="p-2 rounded-lg"></textarea>
+
+      <div class="flex flex-col items-center">
+        <video id="camera" autoplay playsinline class="hidden rounded-lg w-full"></video>
+        <canvas id="canvas" class="hidden"></canvas>
+        <button type="button" id="startCamera" class="btn">🎥 Nyalakan Kamera</button>
+        <button type="button" id="capture" class="btn hidden">📸 Ambil Foto</button>
       </div>
-      <form id="violation-form" class="space-y-5">
-       <div><label for="kelas" class="block text-sm font-bold text-gray-700 mb-2 flex items-center"> <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Kelas </label> <select id="kelas" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl input-focus transition-all bg-white"> <option value="">Pilih Kelas</option> <option value="X-A">X-A</option> <option value="X-B">X-B</option> <option value="XI-IPA-1">XI-IPA-1</option> <option value="XI-IPA-2">XI-IPA-2</option> <option value="XI-IPS-1">XI-IPS-1</option> <option value="XII-IPA-1">XII-IPA-1</option> <option value="XII-IPA-2">XII-IPA-2</option> <option value="XII-IPS-1">XII-IPS-1</option> </select>
-       </div>
-       <div><label for="nama" class="block text-sm font-bold text-gray-700 mb-2 flex items-center"> <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Nama Siswa </label> <select id="nama" required disabled class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl input-focus transition-all bg-gray-100"> <option value="">Pilih kelas terlebih dahulu</option> </select>
-       </div>
-       <div><label for="jenis-pelanggaran" class="block text-sm font-bold text-gray-700 mb-2 flex items-center"> <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Jenis Pelanggaran </label> <select id="jenis-pelanggaran" required class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl input-focus transition-all bg-white"> <option value="">Pilih Jenis Pelanggaran</option> <option value="Terlambat Masuk Kelas">Terlambat Masuk Kelas</option> <option value="Tidak Mengerjakan PR">Tidak Mengerjakan PR</option> <option value="Tidak Memakai Seragam Lengkap">Tidak Memakai Seragam Lengkap</option> <option value="Membuat Keributan di Kelas">Membuat Keributan di Kelas</option> <option value="Tidak Mengikuti Upacara">Tidak Mengikuti Upacara</option> <option value="Merokok di Area Sekolah">Merokok di Area Sekolah</option> <option value="Berkelahi">Berkelahi</option> <option value="Membolos">Membolos</option> </select>
-       </div>
-       <div><label class="block text-sm font-bold text-gray-700 mb-3 flex items-center"> <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Foto Wajah (Face Recognition) </label>
-        <div class="camera-container mb-4">
-         <video id="camera-preview" autoplay playsinline class="hidden"></video>
-         <canvas id="canvas" class="hidden"></canvas>
-         <div id="preview-container" class="text-center">
-          <div class="inline-block p-8 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-300">
-           <svg class="w-20 h-20 text-gray-400 mx-auto mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
-           </svg>
-           <p class="text-gray-500 text-sm">Klik tombol untuk mengambil foto</p>
-          </div>
-         </div>
-        </div>
-        <div class="flex gap-3"><button type="button" id="start-camera" class="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-xl font-semibold btn-hover transition-all flex items-center justify-center gap-2">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-          </svg> Buka Kamera </button> <button type="button" id="capture-photo" class="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-xl font-semibold btn-hover transition-all flex items-center justify-center gap-2 hidden">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
-          </svg> Ambil Foto </button>
-        </div>
-       </div><button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 rounded-xl font-bold text-lg btn-hover transition-all flex items-center justify-center shadow-lg"> <span id="submit-text">💾 Simpan Pelanggaran</span>
-        <div id="submit-loading" class="loading-spinner ml-2 hidden"></div></button>
-      </form>
-     </div><!-- Daftar Pelanggaran -->
-     <div class="glass-effect rounded-3xl p-8 card-shadow relative">
-      <svg class="icon-decoration w-32 h-32 text-blue-500" style="top: -20px; left: -20px;" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-      </svg>
-      <div class="flex items-center justify-between mb-6">
-       <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mr-4">
-         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-         </svg>
-        </div>
-        <h2 class="text-3xl font-bold text-gray-800">Daftar Pelanggaran</h2>
-       </div><span id="record-count" class="bg-gradient-to-r from-blue-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">0</span>
-      </div>
-      <div id="violations-list" class="space-y-4 max-h-[600px] overflow-y-auto pr-2">
-       <div class="text-center text-gray-400 py-12">
-        <div class="inline-block p-6 bg-gray-50 rounded-3xl mb-4">
-         <svg class="w-20 h-20 mx-auto opacity-50" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
-         </svg>
-        </div>
-        <p class="text-lg font-medium">Belum ada data pelanggaran</p>
-        <p class="text-sm mt-2">Data akan muncul setelah Anda menambahkan pelanggaran</p>
-       </div>
-      </div>
-     </div>
-    </div><!-- Kata Motivasi -->
-    <div class="mt-10 glass-effect rounded-3xl p-10 card-shadow text-center relative overflow-hidden">
-     <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600"></div>
-     <div class="inline-block bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full p-4 mb-6 shadow-lg">
-      <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-      </svg>
-     </div>
-     <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2"><span>✨</span> Pesan Motivasi <span>✨</span></h3>
-     <p id="kata-motivasi" class="text-xl text-gray-700 italic leading-relaxed max-w-3xl mx-auto font-medium">"Kesalahan adalah guru terbaik. Belajarlah dari kesalahan dan jadilah pribadi yang lebih baik. Masa depanmu cerah, jangan sia-siakan dengan pelanggaran!"</p>
-     <div class="mt-6 flex justify-center gap-4">
-      <div class="flex items-center gap-2 text-blue-600 font-semibold">
-       <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-       </svg> Disiplin
-      </div>
-      <div class="flex items-center gap-2 text-blue-600 font-semibold">
-       <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-       </svg> Bertanggung Jawab
-      </div>
-      <div class="flex items-center gap-2 text-blue-600 font-semibold">
-       <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-       </svg> Berprestasi
-      </div>
-     </div>
-    </div>
-   </div>
+
+      <button type="submit" class="btn bg-blue-600 text-white mt-3">Simpan Data</button>
+    </form>
+
+    <p id="status" class="text-center text-white mt-4"></p>
   </div>
-  <script>
-  </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99d4efbc351ea136',t:'MTc2MjkzOTA0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
